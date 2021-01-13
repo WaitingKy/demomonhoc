@@ -8,12 +8,13 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class MENU extends AppCompatActivity {
-ImageButton image1,image2, image3;
+public class monpho extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_m_e_n_u);
+        setContentView(R.layout.activity_monpho);
+
         ImageButton image1 = (ImageButton)findViewById(R.id.image1);
         ImageButton image2 = (ImageButton)findViewById(R.id.image2);
         ImageButton image3 = (ImageButton)findViewById(R.id.image3);
@@ -21,11 +22,11 @@ ImageButton image1,image2, image3;
         image1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Những món bún ngon",Toast.LENGTH_LONG).show();
-                openmonbun();
+                Toast.makeText(getApplicationContext(),"Bạn đã chọn phở khô Gia Lai",Toast.LENGTH_LONG).show();
+                openbuncua();
             }
-            private void openmonbun() {
-                Intent intent = new Intent(MENU.this, monbun.class);
+            private void openbuncua() {
+                Intent intent = new Intent(monpho.this, phokhoGiaLai.class);
                 startActivity(intent);
             }
         });
@@ -33,12 +34,11 @@ ImageButton image1,image2, image3;
         image2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Những món cơm ngon",Toast.LENGTH_LONG).show();
-                openmoncom();
+                Toast.makeText(getApplicationContext(),"Bạn đã chọn phở Nam Định",Toast.LENGTH_LONG).show();
+                openbunbohue();
             }
-
-            private void openmoncom() {
-                Intent intent = new Intent(MENU.this, moncom.class);
+            private void openbunbohue() {
+                Intent intent = new Intent(monpho.this, phonamdinh.class);
                 startActivity(intent);
             }
         });
@@ -46,12 +46,11 @@ ImageButton image1,image2, image3;
         image3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Những món phở ngon",Toast.LENGTH_LONG).show();
-                openmonpho();
+                Toast.makeText(getApplicationContext(),"Bạn đã chọn phở Hà Nội",Toast.LENGTH_LONG).show();
+                openbunthai();
             }
-
-            private void openmonpho() {
-                Intent intent = new Intent(MENU.this, monpho.class);
+            private void openbunthai() {
+                Intent intent = new Intent(monpho.this, phohanoi.class);
                 startActivity(intent);
             }
         });

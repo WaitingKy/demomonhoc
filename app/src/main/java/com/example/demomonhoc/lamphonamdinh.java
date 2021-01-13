@@ -8,12 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class bunthai extends AppCompatActivity {
+public class lamphonamdinh extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bunthai);
-        Button bamgio = (Button)findViewById(R.id.batdau);
+        setContentView(R.layout.activity_lamphonamdinh);
+
+        Button bamgio = (Button)findViewById(R.id.bamgio);
 
         bamgio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -23,7 +25,7 @@ public class bunthai extends AppCompatActivity {
             }
 
             private void openActivity_bamgio() {
-                Intent intent = new Intent(bunthai.this, lambunthai.class);
+                Intent intent = new Intent(lamphonamdinh.this, bamgio.class);
                 startActivity(intent);
             }
         });

@@ -8,22 +8,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class bunthai extends AppCompatActivity {
+public class lambunbohue extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bunthai);
-        Button bamgio = (Button)findViewById(R.id.batdau);
+        setContentView(R.layout.activity_lambunbohue);
+        Button bamgio = (Button)findViewById(R.id.bamgio);
 
         bamgio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Bắt đầu thôi",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"cùng làm bún Thái",Toast.LENGTH_LONG).show();
                 openActivity_bamgio();
             }
 
             private void openActivity_bamgio() {
-                Intent intent = new Intent(bunthai.this, lambunthai.class);
+                Intent intent = new Intent(lambunbohue.this, bamgio.class);
                 startActivity(intent);
             }
         });

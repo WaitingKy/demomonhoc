@@ -24,7 +24,7 @@ public class bunbohue extends AppCompatActivity {
             }
 
             private void openActivity_bamgio() {
-                Intent intent = new Intent(bunbohue.this, bamgio.class);
+                Intent intent = new Intent(bunbohue.this, lambunbohue.class);
                 startActivity(intent);
             }
         });
